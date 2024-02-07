@@ -94,10 +94,7 @@ class Search extends Component {
                 {films && films.length > 0 ? (
                   films.map((film) => (
                     <Col key={film.imdbID}>
-                      <Link
-                        to={`/MovieDetails/${film.imdbID}`}
-                        className="film-link"
-                      >
+                      <Link to={`/MovieDetails/${film.imdbID}`}>
                         <img
                           src={film.Poster}
                           alt={film.Title}

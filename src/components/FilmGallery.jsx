@@ -72,7 +72,7 @@ class FilmGallery extends Component {
         >
           {films.slice(0, 6).map((film, index) => (
             <Col key={index}>
-              <Link to={`/MovieDetails/${film.imdbID}`} className="film-link">
+              <Link to={`/MovieDetails/${film.imdbID}`}>
                 <div className="image-container anima">
                   <img
                     src={film.Poster}
