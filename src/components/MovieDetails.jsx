@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Col, Spinner } from "react-bootstrap";
+import { Button, Col, Placeholder, Spinner } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import { useParams } from "react-router-dom";
@@ -41,7 +41,29 @@ const MovieDetails = () => {
   return (
     <Container fluid className="bg-primary text-light pt-4">
       {error && <div>Error: {error}</div>}
-      {loading && <Spinner animation="border" variant="warning"></Spinner>}
+      {loading && (
+        <Container>
+          <Row>
+            <Col>
+              <Spinner animation="border" variant="warning"></Spinner>
+            </Col>
+            <Col>
+              <div className="text-center  mb-5">
+                <Placeholder animation="glow">
+                  <Placeholder xs={5} />
+                </Placeholder>
+              </div>
+              <div className="text-start">
+                <Placeholder animation="glow">
+                  <Placeholder xs={5} /> <Placeholder xs={4} />{" "}
+                  <Placeholder xs={4} /> <Placeholder xs={6} />{" "}
+                  <Placeholder xs={8} />
+                </Placeholder>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      )}
       {movie && (
         <>
           <Container>

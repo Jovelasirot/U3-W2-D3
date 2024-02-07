@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import { Button, Spinner } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { Link } from "react-router-dom";
 
 class Search extends Component {
   state = {
@@ -93,11 +94,17 @@ class Search extends Component {
                 {films && films.length > 0 ? (
                   films.map((film) => (
                     <Col key={film.imdbID}>
-                      <img
-                        src={film.Poster}
-                        alt={film.Title}
-                        className="h-100 w-75"
-                      />
+                      <Link
+                        to={`/MovieDetails/${film.imdbID}`}
+                        className="film-link"
+                      >
+                        <img
+                          src={film.Poster}
+                          alt={film.Title}
+                          classNa
+                          me="h-100 w-75"
+                        />
+                      </Link>
                       <div>{film.Title}</div>
                     </Col>
                   ))
