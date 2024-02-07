@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Container,
-  ButtonGroup,
-  Button,
-  Card,
-  Dropdown,
-  FormCheck,
-  Row,
-  Col,
-} from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import avatarIcon from "../assets/kids_icon.png";
 

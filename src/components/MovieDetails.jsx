@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Col, Placeholder, Spinner } from "react-bootstrap";
+import { Col, Placeholder, Spinner } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import { useParams } from "react-router-dom";
@@ -36,6 +36,7 @@ const MovieDetails = () => {
 
   useEffect(() => {
     fetchMovieDetails();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -71,7 +72,7 @@ const MovieDetails = () => {
         <>
           <Container>
             <Row>
-              <Col>
+              <Col className="text-center text-md-start">
                 <img src={movie.Poster} alt={movie.Title} />
               </Col>
               <Col>
@@ -80,11 +81,19 @@ const MovieDetails = () => {
                     <h1 className="text-center">{movie.Title}</h1>
                     <div className="d-flex justify-content-between ">
                       <p className="bg-success p-1 rounded-2 ">{movie.Rated}</p>
-                      <p className="bg-warning p-1 rounded-2 ">{movie.Genre}</p>
+                      <p className="bg-warning p-1 rounded-1 ">{movie.Genre}</p>
                     </div>
-                    <p className="text-end">Directed by: {movie.Director}</p>
+                    <div className="d-flex justify-content-between ">
+                      <p className="text-end">Directed by: {movie.Director}</p>
+                      <p className="text-end">{movie.Released}</p>
+                    </div>
                     <p>Cast: {movie.Actors}</p>
-                    <h6>Plot</h6>
+                    <div className="d-flex justify-content-between align-items-center mb-3">
+                      <h6>Plot</h6>
+                      <span className="bg-dark p-1 rounded-1">
+                        Rating: {movie.imdbRating}
+                      </span>
+                    </div>
                     <p>{movie.Plot}</p>
                   </Col>
                 </Row>
