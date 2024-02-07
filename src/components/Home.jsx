@@ -3,19 +3,17 @@ import FilmGallery from "./FilmGallery";
 
 const Home = () => {
   return (
-    <Container fluid>
-      <Row className="flex-column">
-        <Col>
-          <FilmGallery titlePart="Avengers" />
-        </Col>
-        <Col>
-          <FilmGallery titlePart="Harry Potter" />
-        </Col>
-        <Col>
-          <FilmGallery titlePart="The Indiana Jones" />
-        </Col>
-      </Row>
-    </Container>
+    <Row className="flex-column mx-0 ">
+      <Col>
+        <FilmGallery titlePart="Avengers" />
+      </Col>
+      <Col>
+        <FilmGallery titlePart="Harry Potter" />
+      </Col>
+      <Col>
+        <FilmGallery titlePart="The Indiana Jones" />
+      </Col>
+    </Row>
   );
 };
 

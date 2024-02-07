@@ -41,7 +41,7 @@ class FilmGallery extends Component {
   render() {
     const { films, error, loading } = this.state;
     return (
-      <Container fluid className="bg-primary text-light pt-4">
+      <Container fluid className="bg-primary text-light pt-4 text-center">
         {error && <div>Error: {error}</div>}
         {loading && <Spinner animation="border" variant="warning"></Spinner>}
         <Row>

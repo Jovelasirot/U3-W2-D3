@@ -12,11 +12,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
-      <div className="App bg-primary ">
+      <div className="d-flex flex-column vh-100">
         <header>
           <CustomNavbar />
         </header>
-        <main className="h-100 ">
+        <main className="flex-grow-1 bg-primary ">
           <Routes>
             <Route element={<Search />} path="/Movies"></Route>
             <Route element={<TVShows />} path="/TVShows"></Route>
@@ -25,12 +25,11 @@ function App() {
               path="/MovieDetails/:MovieId"
             ></Route>
             <Route element={<Home />} path="/"></Route>
+            <Route element={<UserProfileEdit />} path="/UserProfile"></Route>
+            <Route element={<Setting />} path="/Setting"></Route>
           </Routes>
         </main>
-
-        {/* <UserProfileEdit />  ---- scommenta per vedere userProfile*/}
-        {/* <Setting />  ---- scommenta per vedere settings*/}
-        <footer>
+        <footer className="mt-auto">
           <MyFooter />
         </footer>
       </div>

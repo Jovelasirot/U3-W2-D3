@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Logo from "../assets/logo.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Link, useLocation } from "react-router-dom";
+import Dropdown from "react-bootstrap/Dropdown";
 
 const CustomNavbar = () => {
   const location = useLocation();
@@ -59,8 +60,42 @@ const CustomNavbar = () => {
               <i className="bi bi-bell icons text-light"></i>
             </Nav.Link>
             <Nav.Link href="#">
-              <i className="bi bi-person-circle icons text-light"></i>
+              <Dropdown className="ms-3" drop="start">
+                <Dropdown.Toggle
+                  id="dropdown-basic"
+                  className="primary border border-1  border-secondary    rounded-0 p-1"
+                >
+                  <i className="bi bi-person-circle icons text-light"></i>
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  <Dropdown.Item>
+                    <Link
+                      className={
+                        location.pathname === "/UserProfile"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                      to="/UserProfile"
+                    >
+                      Your Profile
+                    </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <Link
+                      className={
+                        location.pathname === "/Setting"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                      to="/Setting"
+                    >
+                      Settings
+                    </Link>
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
             </Nav.Link>
+            <Nav></Nav>
           </Nav>
         </Navbar.Collapse>
       </Container>
