@@ -79,7 +79,9 @@ class FilmGallery extends Component {
                     alt={film.Title}
                     className="mt-1 w-75 h-100"
                   />
-                  {this.state.selected && <Col>{film.Title}</Col>}
+                  {this.state.selected && (
+                    <Col className="text-light">{film.Title}</Col>
+                  )}
                 </div>
               </Link>
             </Col>

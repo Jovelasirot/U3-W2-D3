@@ -77,12 +77,8 @@ function UserProfileEdit() {
                 <FormCheck.Input
                   className="bg-dark rounded-0"
                   type="checkbox"
-                  id="exampleCheckbox"
                 />
-                <FormCheck.Label
-                  className="text-light"
-                  htmlFor="exampleCheckbox"
-                >
+                <FormCheck.Label className="text-light">
                   Autoplay next episode in a series on all devices.
                 </FormCheck.Label>
               </FormCheck>
