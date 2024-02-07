@@ -39,12 +39,16 @@ const MovieDetails = () => {
   }, []);
 
   return (
-    <Container fluid className="bg-primary text-light pt-4">
+    <Container
+      fluid
+      className="bg-primary text-light pt-4 h-100 d-flex
+    align-items-center"
+    >
       {error && <div>Error: {error}</div>}
-      {loading && (
+      {loading ? (
         <Container>
           <Row>
-            <Col>
+            <Col className="d-flex justify-content-center align-items-center ">
               <Spinner animation="border" variant="warning"></Spinner>
             </Col>
             <Col>
@@ -63,8 +67,7 @@ const MovieDetails = () => {
             </Col>
           </Row>
         </Container>
-      )}
-      {movie && (
+      ) : (
         <>
           <Container>
             <Row>

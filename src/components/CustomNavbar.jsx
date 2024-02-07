@@ -59,11 +59,11 @@ const CustomNavbar = () => {
             <Nav.Link href="#">
               <i className="bi bi-bell icons text-light"></i>
             </Nav.Link>
-            <Nav.Link href="#">
+            <div>
               <Dropdown className="ms-3" drop="start">
                 <Dropdown.Toggle
                   id="dropdown-basic"
-                  className="primary border border-1  border-secondary    rounded-0 p-1"
+                  className="primary border border-1  border-secondary    rounded-0 "
                 >
                   <i className="bi bi-person-circle icons text-light"></i>
                 </Dropdown.Toggle>
@@ -94,7 +94,7 @@ const CustomNavbar = () => {
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
-            </Nav.Link>
+            </div>
             <Nav></Nav>
           </Nav>
         </Navbar.Collapse>
