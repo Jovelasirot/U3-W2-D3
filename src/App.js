@@ -3,6 +3,7 @@ import CustomNavbar from "./components/CustomNavbar";
 import Home from "./components/Home";
 import MovieDetails from "./components/MovieDetails";
 import MyFooter from "./components/MyFooter";
+import NotFound from "./components/NotFound";
 import Search from "./components/Search";
 import Setting from "./components/Settings";
 import TVShows from "./components/TVShows";
@@ -27,6 +28,7 @@ function App() {
             <Route element={<Home />} path="/"></Route>
             <Route element={<UserProfileEdit />} path="/UserProfile"></Route>
             <Route element={<Setting />} path="/Setting"></Route>
+            <Route element={<NotFound />} path="*" />
           </Routes>
         </main>
         <footer className="mt-auto">
