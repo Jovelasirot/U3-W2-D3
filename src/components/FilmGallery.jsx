@@ -3,6 +3,7 @@ import { Col, Row } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import { Button, Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { getByAltText } from "@testing-library/react";
 
 class FilmGallery extends Component {
   state = {
@@ -71,7 +72,7 @@ class FilmGallery extends Component {
           className="g-2 justify-content-center "
         >
           {films.slice(0, 6).map((film, index) => (
-            <Col key={index}>
+            <Col>
               <Link to={`/MovieDetails/${film.imdbID}`}>
                 <div className="image-container anima">
                   <img
